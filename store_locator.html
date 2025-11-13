@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Watches - Store Locator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="navfoot.css">
+    <link rel="stylesheet" href="store_locator.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Top Section Start -->
+     <div class="container-fluid" id="main">
+        
+     </div>
+     <!-- Top Section End -->
+    <!-- Navbar Start -->
+<ul class="nav justify-content-center" id="navbar">
+  
+</ul>
+<!-- Navbar End -->
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <img src="./images/store_locator-banner.png" alt="Aura Watches Store">
+    </div>
+
+    <!-- Store Locator Section -->
+    <div class="container">
+        <h2 class="section-title">Our Store Locations</h2>
+        
+        <div class="store-locator-container">
+            <div class="row g-0">
+                <div class="col-lg-4">
+                    <div class="stores-sidebar">
+                        <h3 class="mb-4">Select a Store</h3>
+                        <div class="store-card active" data-branch="clifton">
+                            <h5>Clifton Branch</h5>
+                            <p><i class="fas fa-map-marker-alt"></i> Shop #12, Ocean Mall, Clifton, Karachi</p>
+                            <p><i class="fas fa-phone"></i> +92 21 3514 1001</p>
+                            <p><i class="fas fa-clock"></i> Mon-Sat, 11 AM - 9 PM</p>
+                        </div>
+                        <div class="store-card" data-branch="defence">
+                            <h5>Defence Branch</h5>
+                            <p><i class="fas fa-map-marker-alt"></i> Plot #45, DHA Phase 6, Karachi</p>
+                            <p><i class="fas fa-phone"></i> +92 21 3534 2002</p>
+                            <p><i class="fas fa-clock"></i> Mon-Sun, 12 PM - 10 PM</p>
+                        </div>
+                        <div class="store-card" data-branch="gulshan">
+                            <h5>Gulshan Branch</h5>
+                            <p><i class="fas fa-map-marker-alt"></i> Shop #3, Gulshan Center, Gulshan-e-Iqbal, Karachi</p>
+                            <p><i class="fas fa-phone"></i> +92 21 3481 3003</p>
+                            <p><i class="fas fa-clock"></i> Mon-Fri, 10 AM - 8 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Visit Our Stores</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                        <h4>Hands-On Experience</h4>
+                        <p>Try on our premium timepieces and feel the craftsmanship firsthand.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Expert Consultation</h4>
+                        <p>Our knowledgeable staff will help you find the perfect watch.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>After-Sales Service</h4>
+                        <p>Professional maintenance and repair services for your timepiece.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Store Hours Section -->
+    <div class="store-hours">
+        <div class="container">
+            <h2 class="section-title text-white">General Store Hours</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="hours-card">
+                        <h3>Opening Times</h3>
+                        <ul class="hours-list">
+                            <li><span class="day">Monday - Friday</span> <span class="time">10:00 AM - 8:00 PM</span></li>
+                            <li><span class="day">Saturday</span> <span class="time">11:00 AM - 9:00 PM</span></li>
+                            <li><span class="day">Sunday</span> <span class="time">12:00 PM - 6:00 PM</span></li>
+                        </ul>
+                        <div class="special-note">
+                            <i class="fas fa-info-circle"></i> Holiday hours may vary. Please call ahead to confirm.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Footer Start-->
+<div class="container-fluid p-0 mt-5" id="footer">
+  
+</div>
+  <!-- Footer End -->
+</body>
+<!-- JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="navfoot.js"></script>
+<script src="store_locator.js"></script>
+</html>

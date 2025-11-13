@@ -1,0 +1,320 @@
+:root {
+            --primary-color: #1A3C5E;
+            --secondary-color: #9cd0db;
+            --accent-color: #f8b500;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        /* Banner Section */
+        .banner {
+            background-image: linear-gradient(rgba(26, 60, 94, 0.7), rgba(26, 60, 94, 0.7)), url('./images/contact-banner.webp');
+            width: 100vw;
+            height: 60vh;
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .banner h1 {
+            color: var(--light-color);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .banner h5 {
+            color: var(--light-color);
+            max-width: 800px;
+            font-weight: 300;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        /* Main Container */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            width: 100%;
+            padding: 80px 20px;
+            background-color: var(--light-color);
+        }
+        
+        /* Info Container */
+        .info-container {
+            color: var(--primary-color);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background-color: white;
+            margin-right: 40px;
+            max-width: 400px;
+        }
+        
+        .info-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            margin-bottom: 30px;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .info-container img:hover {
+            transform: scale(1.05);
+        }
+        
+        .child {
+            height: 100px;
+            width: 250px;
+            background-color: var(--primary-color);
+            margin-top: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .child:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .info-container h5 {
+            margin: 0;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .info-container a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .info-container a:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        /* Form Container */
+        .form-container {
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background-color: white;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .form-container h3 {
+            margin: 0 0 30px 0;
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .form-container h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-container .field {
+            margin-bottom: 20px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            width: 100%;
+            background-color: white;
+            color: var(--dark-color);
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .form-container .field:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.2rem rgba(156, 208, 219, 0.25);
+            outline: none;
+        }
+        
+        .form-container textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .form-container button {
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 200px;
+            align-self: center;
+        }
+        
+        .form-container button:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Map Section */
+        .map-section {
+            padding: 80px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+        
+        .map-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .map-section p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        #map {
+            height: 400px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 5px solid var(--secondary-color);
+        }
+        
+        /* Contact Methods */
+        .contact-methods {
+            padding: 80px 20px;
+            background-color: var(--light-color);
+            text-align: center;
+        }
+        
+        .contact-methods h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .method-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .method-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .method-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .method-card p {
+            color: var(--dark-color);
+            margin-bottom: 0;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .info-container {
+                margin-right: 0;
+                margin-bottom: 40px;
+                max-width: 100%;
+            }
+            
+            .form-container {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .banner h1 {
+                font-size: 2.5rem;
+            }
+            
+            .banner h5 {
+                font-size: 1rem;
+            }
+            
+            .map-section h2, .contact-methods h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .banner {
+                height: 50vh;
+            }
+            
+            .banner h1 {
+                font-size: 2rem;
+            }
+            
+            .info-container, .form-container {
+                padding: 20px;
+            }
+        }

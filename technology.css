@@ -1,0 +1,319 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            
+    }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+        }
+
+        .hero-video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+
+        .intro-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1A3C5E;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .tech-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #1A3C5E;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 0;
+        }
+         .intro-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 50vh;
+            transition: transform 0.3s ease;
+        }
+
+        .intro-image:hover {
+            transform: translateY(-5px);
+        }
+
+        .intro-image img {
+            width: 80vh;
+            height: 100%;
+        }
+        
+        /* Technology Features */
+        .tech-features {
+            padding: 100px 0;
+        }
+
+        .tech-item {
+            margin-bottom: 120px;
+        }
+
+        .tech-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .tech-content {
+            padding: 30px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background-color: #1A3C5E;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .tech-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #1A3C5E;
+        }
+
+        .tech-content p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .tech-benefits {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tech-benefits li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tech-benefits i {
+            color: #1A3C5E;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .tech-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 50vh;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-image:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Technology Comparison */
+        .tech-comparison {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #1A3C5E;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #777;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .comparison-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-icon {
+            width: 70px;
+            height: 70px;
+            background: #1A3C5E;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .comparison-icon i {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .comparison-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1A3C5E;
+        }
+
+        .comparison-card p {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .comparison-bar {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: #1A3C5E;
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        .comparison-value {
+            font-weight: bold;
+            color: #1A3C5E;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .tech-stats {
+                flex-wrap: wrap;
+            }
+            
+            .stat-item {
+                flex: 0 0 50%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .intro-section, .tech-features, .tech-comparison {
+                padding: 80px 0;
+            }
+            
+            .tech-item {
+                margin-bottom: 80px;
+            }
+            
+            .tech-content {
+                padding: 20px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-content h6 {
+                font-size: 0.8rem;
+            }
+            
+            .stat-item {
+                flex: 0 0 100%;
+            }
+            
+            .tech-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
