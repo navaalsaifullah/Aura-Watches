@@ -143,23 +143,55 @@ const parent = document.getElementById('parent');
     }
 ];
 
-        watches.forEach((watch) => {
-            const featuresList = watch.features.map(feature => `<li><i class="fas fa-check-circle me-2"></i>${feature}</li>`).join('');
-            
-            const child = `
-                <div class="child">
-                    <img src="${watch.image}" alt="${watch.title}" class="image">
-                    <h3 class="watch-title">${watch.title}</h3>
-                    <div class="watch-price">${watch.price}</div>
-                    <div class="watch-overlay">
-                        <h4>${watch.title}</h4>
-                        <p>${watch.description}</p>
-                        <ul class="watch-features">
-                            ${featuresList}
-                        </ul>
-                        <button class="btn-buy">ADD TO CART</button>
-                    </div>
-                </div>
-            `;
-            parent.innerHTML += child;
-        });
+// Your watches array and 'parent' element must already exist above this code
+
+watches.forEach((watch) => {
+    const featuresList = watch.features.map(feature => 
+        `<li><i class="fas fa-check-circle me-2"></i>${feature}</li>`
+    ).join('');
+    
+    const child = `
+        <div class="child">
+            <img src="${watch.image}" alt="${watch.title}" class="image">
+            <h3 class="watch-title">${watch.title}</h3>
+            <div class="watch-price">${watch.price}</div>
+            <div class="watch-overlay">
+                <h4>${watch.title}</h4>
+                <p>${watch.description}</p>
+                <ul class="watch-features">
+                    ${featuresList}
+                </ul>
+                <button class="btn-buy">ADD TO CART</button>
+            </div>
+        </div>
+    `;
+    parent.innerHTML += child;
+});
+
+// === LUXURY ALERT & FEEDBACK – ADDED AUTOMATICALLY TO ALL BUTTONS ===
+document.querySelectorAll('.btn-buy').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation(); // Prevents overlay hover conflicts if any
+
+        // Get the exact watch title from the card
+        const watchTitle = this.closest('.child').querySelector('.watch-title').textContent.trim();
+
+        // Ultra-premium alert message
+        alert(`🛒 Added to Cart Successfully!\n\n${watchTitle}\n\nExquisite choice. This Aura timepiece represents the pinnacle of horological artistry.\n\nThank you for your discerning taste.\n`);
+
+        // Luxury button feedback
+        const originalText = this.textContent;
+        this.textContent = 'ADDED ✓';
+        this.style.backgroundColor = '#0f172a';
+        this.style.transform = 'scale(1.06)';
+        this.disabled = true;
+
+        setTimeout(() => {
+            this.textContent = originalText;
+            this.style.backgroundColor = '';
+            this.style.transform = '';
+            this.disabled = false;
+        }, 2700);
+    });
+});
