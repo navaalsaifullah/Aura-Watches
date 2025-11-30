@@ -19,7 +19,6 @@ var swiper = new Swiper(".mySwiper", {
             {
                 id: 1,
                 name: "Aura Smart",
-                price: "$599",
                 image: "./images/category1.jpg",
                 category: "available",
                 page: "smart.html"
@@ -27,7 +26,6 @@ var swiper = new Swiper(".mySwiper", {
             {
                 id: 2,
                 name: "Aura Sportz",
-                price: "$349",
                 image: "./images/category2.jpg",
                 category: "available",
                 page: "sportz.html"
@@ -35,7 +33,6 @@ var swiper = new Swiper(".mySwiper", {
             {
                 id: 3,
                 name: "Aura Premier",
-                price: "$499",
                 image: "./images/category3.png",
                 category: "available",
                 page: "premier.html"
@@ -43,38 +40,38 @@ var swiper = new Swiper(".mySwiper", {
             {
                 id: 4,
                 name: "Aura Digital",
-                price: "$399",
                 image: "./images/category4.jpg",
                 category: "available",
                 page: "digital.html"
             },
             {
                 id: 5,
-                name: "Aura Limited Edition",
-                price: "$899",
+                name: "Adventure X",
+                price: "$219.99",
                 image: "./images/digital5.png",
                 category: "featured",
                 page: "digital.html"
             },
             {
                 id: 6,
-                name: "Aura Heritage",
-                price: "$499",
+                name: " Urban Classic",
+                price: "$279",
                 image: "./images/premier4.png",
                 category: "featured",
                 page: "premier.html"
             },
-            // {
-            //     id: 7,
-            //     name: "Aura Heritage",
-            //     price: "$499",
-            //     image: "./images/smart13.png",
-            //     category: "featured"
-            // },
             {
                 id: 7,
-                name: "Aura Heritage",
-                price: "$499",
+                name: "Music Master",
+                price: "$319",
+                image: "./images/smart13.png",
+                category: "featured",
+                page: "smart.html"
+            },
+            {
+                id: 8,
+                name: "Soccer Star",
+                price: "$319",
                 image: "./images/sportz10.png",
                 category: "featured",
                 page: "sportz.html"
@@ -92,8 +89,7 @@ var swiper = new Swiper(".mySwiper", {
                     </div>
                     <div class="product-info">
                         <h3>${product.name}</h3>
-                        <p class="price">${product.price}</p>
-                        <button class="add-to-cart-btn">Add to Cart</button>
+                       <a href="${product.page}"> <button class="add-to-cart-btn">See More</button></a>
                     </div>
                 </div>
             `;

@@ -208,8 +208,12 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.quick-view-btn a {
+   text-decoration: none;
+    color: #1A3C5E;
+}
 .quick-view-btn:hover {
-    background: white;
+    background: #9cd0db;
     color: #1A3C5E;
 }
 
@@ -241,9 +245,12 @@ body {
     transition: all 0.3s ease;
     width: 100%;
 }
-
-.add-to-cart-btn:hover {
-    background: #9cd0db;
+.add-to-cart-btn a{
+text-decoration: none;
+color: #9cd0db;
+}
+.add-to-cart-btn:hover{
+    background-color: #9cd0db;
     color: #1A3C5E;
 }
 

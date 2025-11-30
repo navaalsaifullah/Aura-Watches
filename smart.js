@@ -130,39 +130,65 @@ const watches = [
     "details": "The ultimate business smartwatch with premium materials, exclusive features, and luxury design elements."
   }
 ];
-
-        function generateWatchCards() {
-            
-            
-            watches.forEach((watch) => {
-                const featuresHTML = watch.features.map(feature => 
-                    `<span class="feature">${feature}</span>`
-                ).join('');
-                
-                const card = `
-                    <div class="child">
-                        <div class="image-container">
-                            <img src="${watch.image}" alt="${watch.title}" class="image">
-                        </div>
-                        <div class="card-content">
-                            <h3>${watch.title}</h3>
-                            <p>${watch.description}</p>
-                            <div class="price">${watch.price}</div>
-                        </div>
-                        <div class="overlay-content">
-                            <h3>${watch.title}</h3>
-                            <p>${watch.details}</p>
-                            <div class="features">
-                                ${featuresHTML}
-                            </div>
-                            <button class="btn-overlay">ADD TO CART</button>
-                        </div>
+function generateWatchCards() {
+    watches.forEach((watch) => {
+        const featuresHTML = watch.features.map(feature => 
+            `<span class="feature">${feature}</span>`
+        ).join('');
+        
+        const card = `
+            <div class="child">
+                <div class="image-container">
+                    <img src="${watch.image}" alt="${watch.title}" class="image">
+                </div>
+                <div class="card-content">
+                    <h3>${watch.title}</h3>
+                    <p>${watch.description}</p>
+                    <div class="price">${watch.price}</div>
+                </div>
+                <div class="overlay-content">
+                    <h3>${watch.title}</h3>
+                    <p>${watch.details}</p>
+                    <div class="features">
+                        ${featuresHTML}
                     </div>
-                `;
-                
-                parent.innerHTML += card;
-            });
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            generateWatchCards();
+                    <button class="btn-overlay">ADD TO CART</button>
+                </div>
+            </div>
+        `;
+        
+        parent.innerHTML += card;
+    });
+
+    // === ADD ALERT & LUXURY FEEDBACK AFTER ALL CARDS ARE CREATED ===
+    document.querySelectorAll('.btn-overlay').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation(); // Prevents any overlay hover conflicts
+
+            // Get the watch title from the same card (works perfectly)
+            const watchTitle = this.closest('.child').querySelector('h3').textContent.trim();
+
+            // Luxury alert message using the real watch name
+            alert(`🛒 Added to Cart Successfully!\n\n${watchTitle}\n\nThank you for your impeccable taste in horology.\nAura Watches appreciates collectors of true distinction.`);
+
+            // Premium button feedback
+            const originalText = this.textContent;
+            this.textContent = 'ADDED ✓';
+            this.style.backgroundColor = '#0f172a';
+            this.style.transform = 'scale(1.05)';
+            this.disabled = true;
+
+            setTimeout(() => {
+                this.textContent = originalText;
+                this.style.backgroundColor = '';
+                this.style.transform = '';
+                this.disabled = false;
+            }, 2600);
         });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    generateWatchCards();
+});
